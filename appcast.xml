@@ -3,6 +3,14 @@
     <channel>
         <title>Orchard Ops</title>
         <item>
+            <title>0.2.0</title>
+            <pubDate>Sun, 29 Mar 2026 16:14:56 +0900</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/shinout/orchard-ops-site/releases/download/v0.2.0/OrchardOps.dmg" length="2358793" type="application/octet-stream"/>
+        </item>
+        <item>
             <title>0.1.0</title>
             <pubDate>Sun, 29 Mar 2026 12:29:08 +0900</pubDate>
             <sparkle:version>1</sparkle:version>
