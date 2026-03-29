@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Orchard Ops</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <style>
+        :root {
+            --sage: #7A8B6F;
+            --sage-light: #e8ede5;
+            --burgundy: #722F37;
+            --text: #1a1a1a;
+            --muted: #666;
+            --bg: #fafaf9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(180deg, var(--sage-light) 0%, var(--bg) 100%);
+        }
+        .header a.back {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--sage);
+            text-decoration: none;
+        }
+        .header a.back:hover { text-decoration: underline; }
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 1.05rem;
+            color: var(--muted);
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+        .faq h2 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+        }
+        .faq-item h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--sage);
+        }
+        .faq-item p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* Contact form */
+        .contact {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+        .contact h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .contact .section-sub {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        .contact form {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: var(--bg);
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sage);
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-submit {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--sage);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .form-submit:hover { background: #697a5f; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            border-top: 1px solid #e8e8e8;
+        }
+        footer a { color: var(--sage); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="/" class="back">&larr; Back to Orchard Ops</a>
+    <h1>Support</h1>
+    <p>Find answers or get in touch.</p>
+</div>
+
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h3>How do I install Orchard Ops?</h3>
+        <p>Download the DMG, open it, and drag Orchard Ops to your Applications folder. On first launch, macOS may ask you to confirm — right-click the app and choose "Open" if needed.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Why does it ask for administrator permission?</h3>
+        <p>Orchard Ops uses <code>pmset</code> to wake your Mac before scheduled tasks. This requires administrator privileges. It's only used when you enable the "Wake Mac for this task" option.</p>
+    </div>
+    <div class="faq-item">
+        <h3>My task didn't run. What should I check?</h3>
+        <p>Make sure the task is enabled (toggle in the sidebar). Check the task detail view for run history and error logs. If your Mac was asleep, ensure "Wake Mac for this task" is turned on.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Does it work on MacBook?</h3>
+        <p>Yes. Orchard Ops works on any Mac. The wake-from-sleep feature works best when plugged into power, but everything else works anywhere.</p>
+    </div>
+    <div class="faq-item">
+        <h3>What's the difference between Free and Pro?</h3>
+        <p>Only the number of tasks. Free supports up to 3 scheduled tasks. Pro unlocks unlimited tasks for a one-time $15 purchase. All features are available in both.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How do I set up Gmail reminders?</h3>
+        <p>When creating a new task, click "Gmail Template". You'll need a Google App Password — the setup wizard walks you through it. Your password is stored securely in macOS Keychain.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How does it update?</h3>
+        <p>Automatic updates via Sparkle. You'll get a notification when a new version is available — one click to update.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Will it affect my existing cron jobs or launchd tasks?</h3>
+        <p>No. Orchard Ops creates its own launchd jobs and never modifies existing ones. You can browse system jobs in the app, but they're read-only.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How do I uninstall?</h3>
+        <p>Drag Orchard Ops from Applications to the Trash. The app's launchd jobs will stop running automatically. To clean up config files, remove <code>~/Library/Application Support/OrchardOps</code>.</p>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p class="section-sub">Bug report, feature request, or question — we'd love to hear from you.</p>
+    <form action="https://formspree.io/f/mreoplna" method="POST">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select id="type" name="type">
+                <option value="bug">Bug Report</option>
+                <option value="feature">Feature Request</option>
+                <option value="question">Question</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Describe your issue or idea..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p><a href="/">Orchard Ops</a> &middot; <a href="mailto:support@orchard-ops.com">support@orchard-ops.com</a><br>&copy; 2026 Orchard Ops.</p>
+</footer>
+
+</body>
+</html>

@@ -42,7 +42,14 @@
             letter-spacing: -0.02em;
         }
         .hero .tagline {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
+            color: var(--text);
+            font-weight: 500;
+            max-width: 560px;
+            margin: 0 auto 12px;
+        }
+        .hero .sub-tagline {
+            font-size: 1.05rem;
             color: var(--muted);
             max-width: 520px;
             margin: 0 auto 32px;
@@ -71,29 +78,191 @@
         }
         .hero .cta-sub a:hover { text-decoration: underline; }
 
-        /* Features */
-        .features {
-            max-width: 900px;
+        /* Pain Point */
+        .pain {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px 0;
+            text-align: center;
+        }
+        .pain h2 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        .pain .pain-description {
+            font-size: 1.05rem;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        .pain .pain-solution {
+            display: inline-block;
+            padding: 16px 28px;
+            background: #fff;
+            border: 2px solid var(--sage);
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--sage);
+        }
+
+        /* Use Cases */
+        .use-cases {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px 20px;
+            text-align: center;
+        }
+        .use-cases h2 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .use-cases .section-sub {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 40px;
+        }
+        .use-case-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            text-align: left;
+        }
+        .use-case {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 20px 24px;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+        }
+        .use-case-icon {
+            font-size: 1.6rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .use-case h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .use-case p {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        /* How it works */
+        .how-it-works {
+            max-width: 800px;
             margin: 0 auto;
             padding: 60px 20px;
+            text-align: center;
+        }
+        .how-it-works h2 {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+        .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--sage);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+        .step h3 {
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+        .step p {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        /* Features grid */
+        .features {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
         }
         .feature {
             text-align: center;
+            padding: 24px 16px;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
         }
         .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
         }
         .feature h3 {
-            font-size: 1.1rem;
-            margin-bottom: 6px;
+            font-size: 1rem;
+            margin-bottom: 4px;
         }
         .feature p {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--muted);
+        }
+
+        /* Comparison */
+        .comparison {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .comparison h2 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .comparison .section-sub {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+        .comparison table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        .comparison th {
+            padding: 12px 16px;
+            border-bottom: 2px solid #e0e0e0;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .comparison td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #eee;
+        }
+        .comparison tr td:first-child {
+            font-weight: 500;
+        }
+        .comparison .highlight {
+            color: var(--sage);
+            font-weight: 600;
+        }
+        .comparison .dim {
+            color: #bbb;
         }
 
         /* Screenshot */
@@ -156,6 +325,68 @@
             font-weight: 600;
         }
 
+        /* FAQ */
+        .faq {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .faq h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .faq-item {
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+        }
+        .faq-item h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--sage);
+        }
+        .faq-item p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* Bottom CTA */
+        .bottom-cta {
+            text-align: center;
+            padding: 60px 20px 20px;
+        }
+        .bottom-cta h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+        .bottom-cta .cta {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--sage);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .bottom-cta .cta:hover { background: #697a5f; }
+        .bottom-cta .cta-sub {
+            display: block;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .bottom-cta .cta-sub a {
+            color: var(--sage);
+            text-decoration: none;
+        }
+        .bottom-cta .cta-sub a:hover { text-decoration: underline; }
+
         /* Footer */
         footer {
             text-align: center;
@@ -181,41 +412,103 @@
 <section class="hero">
     <img src="icon.png" alt="Orchard Ops icon" class="hero-icon">
     <h1>Orchard Ops</h1>
-    <p class="tagline">Automate your Mac — schedule CLI commands, scripts, and Shortcuts with a clean native UI.</p>
+    <p class="tagline">Keep your Mac working while you're away.</p>
+    <p class="sub-tagline">Schedule scripts, automate tasks, and let your Mac handle the rest — no Terminal required.</p>
     <a href="https://github.com/shinout/orchard-ops-site/releases/latest/download/OrchardOps.dmg" class="cta">Download Free</a>
     <p class="cta-sub">or <a href="https://orchard-ops.lemonsqueezy.com/checkout/buy/acb0d536-47af-45ad-a1ab-8e3f5bd369a9">Buy Pro License</a> for unlimited tasks</p>
 </section>
 
+<section class="pain">
+    <h2>Scheduled tasks shouldn't be invisible.</h2>
+    <p class="pain-description">
+        You set up a cron job or a launchd plist months ago. Is it still running? Did it ever run?<br>
+        Command-line schedulers give you no feedback, no visibility, and no sense of control.<br>
+        You forget what you set up. You lose track. You stop trusting it.
+    </p>
+    <p class="pain-solution">Orchard Ops gives you a timeline — see exactly what runs, and when.</p>
+</section>
+
+<section class="pain">
+    <h2>Your Mac was asleep. Your task never ran.</h2>
+    <p class="pain-description">
+        Scheduled tasks don't run when your Mac is sleeping.<br>
+        You wake up expecting results, but nothing happened — because your Mac didn't.<br>
+        Orchard Ops wakes your Mac right before each task, then lets it sleep again.
+    </p>
+    <p class="pain-solution">Never miss a scheduled job — even at 3 AM.</p>
+</section>
+
+<section class="use-cases">
+    <h2>What will your Mac do while you sleep?</h2>
+    <p class="section-sub">Set it up once. It runs every day.</p>
+    <div class="use-case-list">
+        <div class="use-case">
+            <div class="use-case-icon">🤖</div>
+            <div>
+                <h3>Run AI agents on a schedule</h3>
+                <p>Kick off data collection, content generation, or monitoring scripts automatically — even overnight.</p>
+            </div>
+        </div>
+        <div class="use-case">
+            <div class="use-case-icon">📡</div>
+            <div>
+                <h3>Scrape & sync data daily</h3>
+                <p>Pull prices, news feeds, or API data every morning before you wake up.</p>
+            </div>
+        </div>
+        <div class="use-case">
+            <div class="use-case-icon">💾</div>
+            <div>
+                <h3>Automate backups</h3>
+                <p>Run rsync, database dumps, or custom backup scripts on a reliable schedule.</p>
+            </div>
+        </div>
+        <div class="use-case">
+            <div class="use-case-icon">📬</div>
+            <div>
+                <h3>Send recurring reports & reminders</h3>
+                <p>Email yourself weekly summaries, daily reminders, or scheduled notifications with the built-in Gmail template.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works">
+    <h2>How it works</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Add a task</h3>
+            <p>Point to any script, CLI command, or Apple Shortcut.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Set a schedule</h3>
+            <p>Pick a time — daily, hourly, monthly, or at login. No crontab syntax needed.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Walk away</h3>
+            <p>Your Mac handles the rest. Check the timeline anytime to see what ran.</p>
+        </div>
+    </div>
+</section>
+
 <section class="features">
-    <div class="feature">
-        <div class="feature-icon">⏱</div>
-        <h3>Flexible Scheduling</h3>
-        <p>Daily, hourly, monthly, or at login. Set it and forget it.</p>
-    </div>
-    <div class="feature">
-        <div class="feature-icon">📧</div>
-        <h3>Gmail Reminders</h3>
-        <p>Send yourself recurring emails with a built-in Gmail template. No extra tools needed.</p>
-    </div>
-    <div class="feature">
-        <div class="feature-icon">📊</div>
-        <h3>Day Timeline</h3>
-        <p>See all your scheduled tasks on a 24-hour visual timeline.</p>
-    </div>
     <div class="feature">
         <div class="feature-icon">⌨️</div>
         <h3>Shortcuts Integration</h3>
         <p>Run Apple Shortcuts on a schedule — pick from your library and go.</p>
     </div>
     <div class="feature">
-        <div class="feature-icon">🌙</div>
-        <h3>Wake Mac</h3>
-        <p>Wake your Mac from sleep before a task runs. Never miss a scheduled job.</p>
+        <div class="feature-icon">📧</div>
+        <h3>Gmail Templates</h3>
+        <p>Built-in email task. Send recurring reminders without extra tools.</p>
     </div>
     <div class="feature">
         <div class="feature-icon">🔍</div>
         <h3>System Job Browser</h3>
-        <p>Inspect existing launchd jobs on your system without touching the terminal.</p>
+        <p>See all launchd jobs on your Mac — including ones you didn't create.</p>
     </div>
 </section>
 
@@ -224,6 +517,59 @@
     <img src="screenshot.png" alt="Orchard Ops screenshot">
 </section>
 -->
+
+<section class="comparison">
+    <h2>Why Orchard Ops?</h2>
+    <p class="section-sub">You have options. Here's why people switch.</p>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>cron / launchd</th>
+                <th>Lingon Pro</th>
+                <th>Orchard Ops</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Visual timeline</td>
+                <td class="dim">—</td>
+                <td class="dim">—</td>
+                <td class="highlight">✓</td>
+            </tr>
+            <tr>
+                <td>Wake from sleep</td>
+                <td class="dim">—</td>
+                <td class="dim">—</td>
+                <td class="highlight">✓</td>
+            </tr>
+            <tr>
+                <td>No Terminal needed</td>
+                <td class="dim">—</td>
+                <td>✓</td>
+                <td class="highlight">✓</td>
+            </tr>
+            <tr>
+                <td>Apple Shortcuts</td>
+                <td class="dim">—</td>
+                <td>✓</td>
+                <td class="highlight">✓</td>
+            </tr>
+            <tr>
+                <td>Built-in email tasks</td>
+                <td class="dim">—</td>
+                <td class="dim">—</td>
+                <td class="highlight">✓</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>Free</td>
+                <td>$23.99</td>
+                <td class="highlight">Free / $15</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
 <section class="pricing">
     <h2>Simple Pricing</h2>
@@ -250,10 +596,44 @@
     <a href="https://orchard-ops.lemonsqueezy.com/checkout/buy/acb0d536-47af-45ad-a1ab-8e3f5bd369a9" style="display: inline-block; margin-top: 24px; padding: 14px 32px; background: #722F37; color: #fff; text-decoration: none; border-radius: 10px; font-size: 1.1rem; font-weight: 600;">Get Pro License</a>
 </section>
 
+<section class="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+        <h3>Does it work on MacBook?</h3>
+        <p>Yes. Orchard Ops works on any Mac — MacBook, iMac, Mac mini, Mac Pro. The wake-from-sleep feature works best when plugged into power, but everything else works anywhere.</p>
+    </div>
+    <div class="faq-item">
+        <h3>What's the difference between Free and Pro?</h3>
+        <p>Only the number of tasks. Free supports up to 3 scheduled tasks. Pro unlocks unlimited tasks. All features are available in both.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Is it a subscription?</h3>
+        <p>No. Pro is a one-time $15 purchase. No recurring charges, no expiration.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Why isn't it on the App Store?</h3>
+        <p>Orchard Ops needs access to launchd and pmset to schedule tasks and wake your Mac — features that aren't allowed under App Store sandboxing. It's distributed directly with Apple notarization for security.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How does it update?</h3>
+        <p>Automatic updates via Sparkle. You'll get a notification when a new version is available — one click to update.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Will it affect my existing cron jobs or launchd tasks?</h3>
+        <p>No. Orchard Ops creates its own launchd jobs and never modifies existing ones. You can browse system jobs in the app, but they're read-only.</p>
+    </div>
+</section>
+
+<section class="bottom-cta">
+    <h2>Ready to put your Mac to work?</h2>
+    <a href="https://github.com/shinout/orchard-ops-site/releases/latest/download/OrchardOps.dmg" class="cta">Download Free</a>
+    <p class="cta-sub">or <a href="https://orchard-ops.lemonsqueezy.com/checkout/buy/acb0d536-47af-45ad-a1ab-8e3f5bd369a9">Buy Pro License</a> for unlimited tasks</p>
+</section>
+
 <p class="system-req">Requires macOS 14.0 (Sonoma) or later.</p>
 
 <footer>
-    <p>&copy; 2026 shinout. <a href="https://github.com/shinout/orchard-ops-site">GitHub</a></p>
+    <p><a href="/support">Support</a> &middot; <a href="mailto:support@orchard-ops.com">support@orchard-ops.com</a><br style="margin-bottom: 8px;">&copy; 2026 Orchard Ops.</p>
 </footer>
 
 </body>
