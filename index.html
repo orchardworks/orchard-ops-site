@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchard Ops — Task Scheduler for Mac</title>
+    <style>
+        :root {
+            --sage: #7A8B6F;
+            --sage-light: #e8ede5;
+            --burgundy: #722F37;
+            --text: #1a1a1a;
+            --muted: #666;
+            --bg: #fafaf9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(180deg, var(--sage-light) 0%, var(--bg) 100%);
+        }
+        .hero-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 24px;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        .hero .tagline {
+            font-size: 1.25rem;
+            color: var(--muted);
+            max-width: 520px;
+            margin: 0 auto 32px;
+        }
+        .hero .cta {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--sage);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .hero .cta:hover { background: #697a5f; }
+        .hero .cta-sub {
+            display: block;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .hero .cta-sub a {
+            color: var(--sage);
+            text-decoration: none;
+        }
+        .hero .cta-sub a:hover { text-decoration: underline; }
+
+        /* Features */
+        .features {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        .feature {
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .feature p {
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        /* Screenshot */
+        .screenshot-section {
+            text-align: center;
+            padding: 40px 20px 60px;
+        }
+        .screenshot-section img {
+            max-width: 780px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+        }
+
+        /* Pricing */
+        .pricing {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .pricing h2 {
+            font-size: 1.8rem;
+            margin-bottom: 32px;
+        }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .pricing-card {
+            padding: 28px 20px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            background: #fff;
+        }
+        .pricing-card.pro {
+            border-color: var(--sage);
+            box-shadow: 0 2px 12px rgba(122, 139, 111, 0.15);
+        }
+        .pricing-card h3 { font-size: 1.2rem; margin-bottom: 4px; }
+        .pricing-card .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .pricing-card .price span { font-size: 0.9rem; font-weight: 400; color: var(--muted); }
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .pricing-card ul li {
+            padding: 4px 0;
+        }
+        .pricing-card ul li::before {
+            content: "✓ ";
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            border-top: 1px solid #e8e8e8;
+        }
+        footer a { color: var(--sage); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* System req */
+        .system-req {
+            text-align: center;
+            padding: 0 20px 40px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <img src="icon.png" alt="Orchard Ops icon" class="hero-icon">
+    <h1>Orchard Ops</h1>
+    <p class="tagline">Automate your Mac — schedule CLI commands, scripts, and Shortcuts with a clean native UI.</p>
+    <a href="https://github.com/shinout/orchard-ops-site/releases/latest/download/OrchardOps.dmg" class="cta">Download Free</a>
+    <p class="cta-sub">or <a href="#">Buy Pro License</a> for unlimited tasks</p>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <div class="feature-icon">⏱</div>
+        <h3>Flexible Scheduling</h3>
+        <p>Daily, hourly, monthly, or at login. Set it and forget it.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">📧</div>
+        <h3>Gmail Reminders</h3>
+        <p>Send yourself recurring emails with a built-in Gmail template. No extra tools needed.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>Day Timeline</h3>
+        <p>See all your scheduled tasks on a 24-hour visual timeline.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">⌨️</div>
+        <h3>Shortcuts Integration</h3>
+        <p>Run Apple Shortcuts on a schedule — pick from your library and go.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">🌙</div>
+        <h3>Wake Mac</h3>
+        <p>Wake your Mac from sleep before a task runs. Never miss a scheduled job.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">🔍</div>
+        <h3>System Job Browser</h3>
+        <p>Inspect existing launchd jobs on your system without touching the terminal.</p>
+    </div>
+</section>
+
+<!--
+<section class="screenshot-section">
+    <img src="screenshot.png" alt="Orchard Ops screenshot">
+</section>
+-->
+
+<section class="pricing">
+    <h2>Simple Pricing</h2>
+    <div class="pricing-cards">
+        <div class="pricing-card">
+            <h3>Free</h3>
+            <div class="price">$0</div>
+            <ul>
+                <li>Up to 3 scheduled tasks</li>
+                <li>All features included</li>
+                <li>Automatic updates</li>
+            </ul>
+        </div>
+        <div class="pricing-card pro">
+            <h3>Pro</h3>
+            <div class="price">$15 <span>one-time</span></div>
+            <ul>
+                <li>Unlimited tasks</li>
+                <li>All features included</li>
+                <li>Automatic updates</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<p class="system-req">Requires macOS 14.0 (Sonoma) or later.</p>
+
+<footer>
+    <p>&copy; 2026 shinout. <a href="https://github.com/shinout/orchard-ops-site">GitHub</a></p>
+</footer>
+
+</body>
+</html>
