@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orchard Ops CLI reference — schedule tasks on your Mac from the command line or AI agents. Tasks appear in the visual timeline with wake-from-sleep support.">
+    <title>CLI Documentation — Orchard Ops</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable product info">
+    <style>
+        :root {
+            --sage: #7A8B6F;
+            --sage-light: #e8ede5;
+            --burgundy: #722F37;
+            --text: #1a1a1a;
+            --muted: #666;
+            --bg: #fafaf9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            padding: 40px 20px 80px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        a { color: var(--burgundy); }
+        h1 { font-size: 2rem; margin-bottom: 8px; }
+        .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 32px; }
+        h2 { font-size: 1.3rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; }
+        h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+        p { margin-bottom: 12px; }
+        .callout {
+            background: var(--sage-light);
+            border-left: 4px solid var(--sage);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 24px 0;
+        }
+        .callout p { margin-bottom: 0; }
+        pre {
+            background: #1a1a1a;
+            color: #e0e0e0;
+            padding: 16px 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 12px 0 20px;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        .comment { color: #6a9955; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 20px;
+            font-size: 0.95rem;
+        }
+        th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e8e8e8; }
+        th { font-weight: 600; }
+        td code { font-size: 0.85rem; }
+        .back { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; }
+        footer { margin-top: 60px; color: var(--muted); font-size: 0.85rem; text-align: center; }
+    </style>
+</head>
+<body>
+<a href="/" class="back">&larr; Orchard Ops</a>
+
+<h1>CLI Documentation</h1>
+<p class="subtitle">Let your AI assistant set up tasks. You stay in control with the visual timeline.</p>
+
+<div class="callout">
+    <p><strong>How it works:</strong> Tasks added via CLI are the same tasks you see in the Orchard Ops app — same timeline, same wake-from-sleep, same management. The CLI is an input method; the app is your control panel.</p>
+</div>
+
+<h2>Installation</h2>
+
+<p>The CLI ships inside the Orchard Ops app. Install it from the menu:</p>
+<p><strong>Help → Install CLI Command...</strong></p>
+<p>This creates a symlink at <code>/usr/local/bin/orchard-ops</code> (requires admin password once).</p>
+
+<p>Or install via Homebrew:</p>
+<pre><code>brew install --cask orchard-ops</code></pre>
+
+<h2>Commands</h2>
+
+<h3>List tasks</h3>
+<pre><code>orchard-ops list</code></pre>
+<p>Shows all tasks with status, schedule, wake flag, and short ID.</p>
+
+<h3>Add a task</h3>
+<pre><code><span class="comment"># Run a backup script every day at 3:00 AM, waking the Mac</span>
+orchard-ops add \
+  --name "Backup" \
+  --command "rsync -av ~/Documents /Volumes/Backup" \
+  --daily 03:00 \
+  --wake
+
+<span class="comment"># Run a scraper every 30 minutes</span>
+orchard-ops add \
+  --name "Scraper" \
+  --command "./scrape.sh" \
+  --interval 30 \
+  --working-dir /path/to/project
+
+<span class="comment"># Run a Python script on weekdays at 9:00 AM</span>
+orchard-ops add \
+  --name "Report" \
+  --command "python3 report.py" \
+  --weekly mon,tue,wed,thu,fri 09:00 \
+  --env-file /path/to/.env
+
+<span class="comment"># Run at login</span>
+orchard-ops add \
+  --name "Startup" \
+  --command "~/scripts/init.sh" \
+  --run-at-load</code></pre>
+
+<h4>Schedule options</h4>
+<table>
+    <tr><th>Flag</th><th>Format</th><th>Example</th></tr>
+    <tr><td><code>--daily</code></td><td><code>HH:MM</code></td><td><code>--daily 03:00</code></td></tr>
+    <tr><td><code>--weekly</code></td><td><code>days HH:MM</code></td><td><code>--weekly mon,wed,fri 09:00</code></td></tr>
+    <tr><td><code>--monthly</code></td><td><code>day HH:MM</code></td><td><code>--monthly 1 09:00</code></td></tr>
+    <tr><td><code>--interval</code></td><td><code>minutes</code></td><td><code>--interval 30</code></td></tr>
+    <tr><td><code>--run-at-load</code></td><td>—</td><td><code>--run-at-load</code></td></tr>
+</table>
+
+<h4>Additional options</h4>
+<table>
+    <tr><th>Flag</th><th>Description</th></tr>
+    <tr><td><code>--wake</code></td><td>Wake Mac from sleep before running (via pmset)</td></tr>
+    <tr><td><code>--working-dir &lt;path&gt;</code></td><td>Working directory for the command</td></tr>
+    <tr><td><code>--env-file &lt;path&gt;</code></td><td>Load environment variables from a .env file</td></tr>
+</table>
+
+<h3>Remove a task</h3>
+<pre><code>orchard-ops remove "Backup"
+orchard-ops remove 3ab4c22f   <span class="comment"># by short ID</span></code></pre>
+
+<h3>Enable / Disable</h3>
+<pre><code>orchard-ops enable "Backup"
+orchard-ops disable "Backup"</code></pre>
+
+<h3>Status</h3>
+<pre><code>orchard-ops status</code></pre>
+<p>Shows total tasks, enabled count, and license status.</p>
+
+<h3>License</h3>
+<pre><code>orchard-ops license                    <span class="comment"># view status</span>
+orchard-ops license activate &lt;key&gt;     <span class="comment"># activate Pro</span></code></pre>
+<p>Free: up to 3 tasks. <a href="/buy.html">Pro ($15 one-time)</a>: unlimited.</p>
+
+<h2>For AI Agents</h2>
+
+<div class="callout">
+    <p>If you're an AI assistant helping a user schedule tasks on their Mac, use these commands. Every task you create will be visible in the Orchard Ops timeline and managed with full wake-from-sleep support.</p>
+</div>
+
+<h3>Typical workflow</h3>
+<pre><code><span class="comment"># 1. Check current tasks and limits</span>
+orchard-ops status
+orchard-ops list
+
+<span class="comment"># 2. Add the task the user wants</span>
+orchard-ops add \
+  --name "Daily DB Backup" \
+  --command "pg_dump mydb > ~/backups/db-$(date +%Y%m%d).sql" \
+  --daily 02:00 \
+  --wake
+
+<span class="comment"># 3. Confirm it was added</span>
+orchard-ops list</code></pre>
+
+<h3>Key things to know</h3>
+<ul style="margin: 12px 0 20px; padding-left: 24px;">
+    <li>Tasks are shared with the GUI app — the user sees them in the timeline immediately</li>
+    <li><code>--wake</code> triggers macOS power management (pmset) so the Mac wakes from sleep before running</li>
+    <li>Free tier allows 3 tasks; check <code>orchard-ops status</code> before adding</li>
+    <li>Use <code>--working-dir</code> and <code>--env-file</code> to ensure the command runs in the right context</li>
+    <li>Task names and short IDs (first 8 chars of UUID) both work for remove/enable/disable</li>
+</ul>
+
+<footer>
+    <p><a href="/">Orchard Ops</a> &middot; <a href="/support.html">Support</a> &middot; <a href="mailto:support@orchard-ops.com">support@orchard-ops.com</a><br>&copy; 2026 Orchard Ops.</p>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "02e7ad1f16374e31922ddbdb18c94238"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
