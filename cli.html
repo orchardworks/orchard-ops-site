@@ -121,6 +121,12 @@ orchard-ops add \
   --weekly mon,tue,wed,thu,fri 09:00 \
   --env-file /path/to/.env
 
+<span class="comment"># Run at multiple times per day</span>
+orchard-ops add \
+  --name "Health Check" \
+  --command "curl -f https://myapp.com/health" \
+  --daily 09:00,13:00,17:00
+
 <span class="comment"># Run at login</span>
 orchard-ops add \
   --name "Startup" \
@@ -130,9 +136,9 @@ orchard-ops add \
 <h4>Schedule options</h4>
 <table>
     <tr><th>Flag</th><th>Format</th><th>Example</th></tr>
-    <tr><td><code>--daily</code></td><td><code>HH:MM</code></td><td><code>--daily 03:00</code></td></tr>
-    <tr><td><code>--weekly</code></td><td><code>days HH:MM</code></td><td><code>--weekly mon,wed,fri 09:00</code></td></tr>
-    <tr><td><code>--monthly</code></td><td><code>day HH:MM</code></td><td><code>--monthly 1 09:00</code></td></tr>
+    <tr><td><code>--daily</code></td><td><code>HH:MM[,HH:MM,…]</code></td><td><code>--daily 03:00</code> or <code>--daily 09:00,17:00</code></td></tr>
+    <tr><td><code>--weekly</code></td><td><code>days HH:MM[,…]</code></td><td><code>--weekly mon,wed,fri 09:00,17:00</code></td></tr>
+    <tr><td><code>--monthly</code></td><td><code>day HH:MM[,…]</code></td><td><code>--monthly 1 09:00</code></td></tr>
     <tr><td><code>--interval</code></td><td><code>minutes</code></td><td><code>--interval 30</code></td></tr>
     <tr><td><code>--run-at-load</code></td><td>—</td><td><code>--run-at-load</code></td></tr>
 </table>

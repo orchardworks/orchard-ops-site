@@ -36,9 +36,9 @@ Install: Help → Install CLI Command (in app), or `brew install --cask orchard-
 ### Commands
 
 - `orchard-ops list` — list all tasks
-- `orchard-ops add --name "Name" --command "cmd" --daily HH:MM [--wake]` — add a task
-- `orchard-ops add --name "Name" --command "cmd" --weekly mon,wed,fri HH:MM` — weekly
-- `orchard-ops add --name "Name" --command "cmd" --monthly day HH:MM` — monthly
+- `orchard-ops add --name "Name" --command "cmd" --daily HH:MM[,HH:MM] [--wake]` — add a task
+- `orchard-ops add --name "Name" --command "cmd" --weekly mon,wed,fri HH:MM[,HH:MM]` — weekly
+- `orchard-ops add --name "Name" --command "cmd" --monthly day HH:MM[,HH:MM]` — monthly
 - `orchard-ops add --name "Name" --command "cmd" --interval N` — every N minutes
 - `orchard-ops add --name "Name" --command "cmd" --run-at-load` — at login
 - `orchard-ops remove <name-or-id>` — remove a task
