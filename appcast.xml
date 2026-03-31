@@ -24,7 +24,7 @@
             <sparkle:version>3</sparkle:version>
             <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/shinout/orchard-ops-site/releases/download/v0.2.1/OrchardOps.dmg" length="2358859" type="application/octet-stream" sparkle:edSignature="xB91CzLneXIQQhoUt+/LUGL8Tjbm8m1yDcisazODUZIEOp7++BRHrdCOTlNBj34lIgAcO1ud7aWJ3n3XiS8CAQ=="/>
+            <enclosure url="https://github.com/orchardworks/orchard-ops-site/releases/download/v0.2.1/OrchardOps.dmg" length="2358859" type="application/octet-stream" sparkle:edSignature="xB91CzLneXIQQhoUt+/LUGL8Tjbm8m1yDcisazODUZIEOp7++BRHrdCOTlNBj34lIgAcO1ud7aWJ3n3XiS8CAQ=="/>
         </item>
     </channel>
 </rss>
