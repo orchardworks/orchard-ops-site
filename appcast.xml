@@ -3,6 +3,14 @@
     <channel>
         <title>Orchard Ops</title>
         <item>
+            <title>0.3.2</title>
+            <pubDate>Tue, 31 Mar 2026 23:21:01 +0900</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>0.3.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://orchard-ops.com/OrchardOps.dmg" length="2161321" type="application/octet-stream" sparkle:edSignature="FjyJ0fBvntJUTKwc1x6J0kG6JfPCY5euyhwTOoYPnJwIlufRNdoCFp1hEzQ6YnCZS6e7BkVshP+82lwZvqyXBA=="/>
+        </item>
+        <item>
             <title>0.3.1</title>
             <pubDate>Tue, 31 Mar 2026 18:57:25 +0900</pubDate>
             <sparkle:version>5</sparkle:version>
@@ -17,14 +25,6 @@
             <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://orchard-ops.com/OrchardOps.dmg" length="2101427" type="application/octet-stream" sparkle:edSignature="F6PhHnug1HnlbPF+/UAC0FCRq4qTotFcHnlOnWH18yKbAAjbvFBSa6eCrejElU7cPRjyqhgTEDZDqcecncV9CQ=="/>
-        </item>
-        <item>
-            <title>0.2.1</title>
-            <pubDate>Sun, 29 Mar 2026 17:20:02 +0900</pubDate>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/orchardworks/orchard-ops-site/releases/download/v0.2.1/OrchardOps.dmg" length="2358859" type="application/octet-stream" sparkle:edSignature="xB91CzLneXIQQhoUt+/LUGL8Tjbm8m1yDcisazODUZIEOp7++BRHrdCOTlNBj34lIgAcO1ud7aWJ3n3XiS8CAQ=="/>
         </item>
     </channel>
 </rss>
