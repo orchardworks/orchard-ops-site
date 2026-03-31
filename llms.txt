@@ -31,7 +31,7 @@ Requires macOS 14.0 (Sonoma) or later.
 
 Orchard Ops has a CLI tool (`orchard-ops`) that AI assistants can use to register tasks on behalf of the user. Tasks added via CLI appear in the GUI timeline with full wake-from-sleep support.
 
-Install: Help → Install CLI Command (in app), or `brew install --cask orchard-ops`
+Install: Help → Install CLI Command (in app), or `brew install orchardworks/tap/orchard-ops`
 
 ### Commands
 

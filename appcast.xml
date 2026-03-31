@@ -3,6 +3,14 @@
     <channel>
         <title>Orchard Ops</title>
         <item>
+            <title>0.3.0</title>
+            <pubDate>Mon, 30 Mar 2026 20:54:12 +0900</pubDate>
+            <sparkle:version>4</sparkle:version>
+            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://orchard-ops.com/OrchardOps.dmg" length="2101427" type="application/octet-stream" sparkle:edSignature="F6PhHnug1HnlbPF+/UAC0FCRq4qTotFcHnlOnWH18yKbAAjbvFBSa6eCrejElU7cPRjyqhgTEDZDqcecncV9CQ=="/>
+        </item>
+        <item>
             <title>0.2.1</title>
             <pubDate>Sun, 29 Mar 2026 17:20:02 +0900</pubDate>
             <sparkle:version>3</sparkle:version>
@@ -17,14 +25,6 @@
             <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/shinout/orchard-ops-site/releases/download/v0.2.0/OrchardOps.dmg" length="2358793" type="application/octet-stream"/>
-        </item>
-        <item>
-            <title>0.1.0</title>
-            <pubDate>Sun, 29 Mar 2026 12:29:08 +0900</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/shinout/orchard-ops-site/releases/download/v0.1.0/OrchardOps.dmg" length="2344378" type="application/octet-stream" sparkle:edSignature="ym5Abt+WCNIP/jTPlTAtn0i/sX7BvwDu44gkUPBxzASGcYayaI+Qx3b0cYS1y3+uiYgojvFfV7Pda5tTLOFoCw=="/>
         </item>
     </channel>
 </rss>
