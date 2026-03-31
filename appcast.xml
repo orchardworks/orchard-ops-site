@@ -3,6 +3,14 @@
     <channel>
         <title>Orchard Ops</title>
         <item>
+            <title>0.3.3</title>
+            <pubDate>Wed, 01 Apr 2026 00:28:28 +0900</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>0.3.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://orchard-ops.com/OrchardOps.dmg" length="2163048" type="application/octet-stream" sparkle:edSignature="giVBo2jt2YlIeSRwgDsStETfo25bgrJVDfc1udd24+wCd/ZlPUcrTKwXaKzxXmxdYHwT0nRtQPNd/ZvoTIhaAw=="/>
+        </item>
+        <item>
             <title>0.3.2</title>
             <pubDate>Tue, 31 Mar 2026 23:21:01 +0900</pubDate>
             <sparkle:version>6</sparkle:version>
@@ -17,14 +25,6 @@
             <sparkle:shortVersionString>0.3.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://orchard-ops.com/OrchardOps.dmg" length="2151508" type="application/octet-stream" sparkle:edSignature="i+c4+LVMCh75UFORCZ22nOk8O4BxgR3Jl6ga2Me0pM72Pgagzmy0AdbyokhxSqa3o0WA8KMQaUF9igTHgV5zAg=="/>
-        </item>
-        <item>
-            <title>0.3.0</title>
-            <pubDate>Mon, 30 Mar 2026 20:54:12 +0900</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://orchard-ops.com/OrchardOps.dmg" length="2101427" type="application/octet-stream" sparkle:edSignature="F6PhHnug1HnlbPF+/UAC0FCRq4qTotFcHnlOnWH18yKbAAjbvFBSa6eCrejElU7cPRjyqhgTEDZDqcecncV9CQ=="/>
         </item>
     </channel>
 </rss>
