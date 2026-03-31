@@ -35,30 +35,45 @@
             padding: 80px 20px 60px;
             background: linear-gradient(180deg, var(--sage-light) 0%, var(--bg) 100%);
         }
-        .hero-icon {
-            width: 128px;
-            height: 128px;
-            border-radius: 24px;
+        .hero-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
             margin-bottom: 24px;
+        }
+        .hero-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+        }
+        .hero-brand .app-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.01em;
         }
         .hero h1 {
             font-size: 2.8rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             letter-spacing: -0.02em;
-        }
-        .hero .tagline {
-            font-size: 1.5rem;
-            color: var(--text);
-            font-weight: 500;
-            max-width: 560px;
-            margin: 0 auto 12px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .hero .sub-tagline {
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             color: var(--muted);
-            max-width: 520px;
-            margin: 0 auto 32px;
+            max-width: 560px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+        .hero-screenshot {
+            max-width: 720px;
+            width: 100%;
+            margin: 40px auto 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.12);
         }
         .hero .cta {
             display: inline-block;
@@ -448,13 +463,17 @@
 <body>
 
 <section class="hero">
-    <img src="icon.png" alt="Orchard Ops icon" class="hero-icon">
-    <h1>Orchard Ops</h1>
-    <p class="tagline">Keep your Mac working while you're away.</p>
-    <p class="sub-tagline">Schedule scripts, automate tasks, and let your Mac handle the rest — no Terminal required.</p>
+    <div class="hero-brand">
+        <img src="icon.png" alt="Orchard Ops icon" class="hero-icon">
+        <span class="app-name">Orchard Ops</span>
+    </div>
+    <h1>See every scheduled task on your Mac.</h1>
+    <p class="sub-tagline">A visual timeline for cron, launchd, and scripts — with wake-from-sleep so nothing gets missed. No Terminal required.</p>
     <a href="/download.html" class="cta">Download Free</a>
     <p class="cta-sub">or <a href="/buy.html">Buy Pro License</a> for unlimited tasks</p>
     <p class="cta-brew"><code>brew install orchardworks/tap/orchard-ops</code><button class="copy-btn" onclick="navigator.clipboard.writeText('brew install orchardworks/tap/orchard-ops').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})">Copy</button></p>
+    <!-- TODO: タイムラインのスクリーンショットを追加 -->
+    <img src="screenshot-timeline.png" alt="Orchard Ops timeline view" class="hero-screenshot">
 </section>
 
 <section class="pain">
