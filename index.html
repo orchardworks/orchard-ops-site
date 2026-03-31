@@ -84,16 +84,36 @@
         }
         .hero .cta-sub a:hover { text-decoration: underline; }
         .hero .cta-brew {
-            margin-top: 16px;
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 10px 16px;
             font-size: 0.85rem;
-            color: var(--muted);
+            position: relative;
         }
         .hero .cta-brew code {
-            background: #e8ede5;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            color: var(--text);
+            background: none;
+            color: #e0e0e0;
+            font-size: 0.82rem;
+            padding: 0;
+            margin-right: 12px;
+        }
+        .hero .cta-brew .copy-btn {
+            background: none;
+            border: 1px solid #555;
+            border-radius: 4px;
+            color: #999;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            cursor: pointer;
+            transition: all 0.15s;
+            flex-shrink: 0;
+        }
+        .hero .cta-brew .copy-btn:hover {
+            border-color: #aaa;
+            color: #ddd;
         }
 
         /* Pain Point */
@@ -434,7 +454,7 @@
     <p class="sub-tagline">Schedule scripts, automate tasks, and let your Mac handle the rest — no Terminal required.</p>
     <a href="/download.html" class="cta">Download Free</a>
     <p class="cta-sub">or <a href="/buy.html">Buy Pro License</a> for unlimited tasks</p>
-    <p class="cta-brew"><code>brew install orchardworks/tap/orchard-ops</code></p>
+    <p class="cta-brew"><code>brew install orchardworks/tap/orchard-ops</code><button class="copy-btn" onclick="navigator.clipboard.writeText('brew install orchardworks/tap/orchard-ops').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})">Copy</button></p>
 </section>
 
 <section class="pain">
