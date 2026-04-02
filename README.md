@@ -15,7 +15,7 @@ A native macOS task scheduler for developers and power users. Schedule CLI comma
 
 ## Download
 
-[Download the latest release](https://github.com/orchardworks/orchard-ops-site/releases/latest)
+[Download the latest release](https://github.com/orchardworks/orchard-ops.com/releases/latest)
 
 **Free:** Up to 3 scheduled tasks (all features included)
 **Pro:** Unlimited tasks — $15 one-time purchase via [LemonSqueezy](https://orchard-ops.lemonsqueezy.com)
